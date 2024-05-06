@@ -1,63 +1,63 @@
-# Svelte + TS + Vite
+# Command Generator
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+This is a simple Svelte app that generates commands for the `rsync` program based on selected options. In the future
+more programs will be added like `ssh`.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- Allows users to select options such as source and destination directories.
+- Generates `rsync` commands based on the selected options.
+- Provides the generated command for users to copy and use.
 
-## Need an official Svelte framework?
+## Getting Started
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its
-serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less,
-and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+### Prerequisites
 
-## Technical considerations
+Make sure you have Node.js and yarn installed on your machine.
 
-**Why use this over SvelteKit?**
+### Installation
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+1. Clone this repository to your local machine:
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account
-the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the
-other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte
-project.
+   ```bash
+   git clone https://git.jmidd.dev/jmidd-dev/command-generator
+   ```
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been
-structured similarly to SvelteKit so that it is easy to migrate.
+2. Navigate to the project directory:
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+   ```bash
+   cd command-generator
+   ```
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash
-references keeps the default TypeScript setting of accepting type information from the entire workspace, while also
-adding `svelte` and `vite/client` type information.
+3. Install dependencies:
 
-**Why include `.vscode/extensions.json`?**
+   ```bash
+   yarn install
+   ```
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to
-install the recommended extension upon opening the project.
+### Running the App
 
-**Why enable `allowJs` in the TS template?**
+To run the app locally, use the following command:
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of
-JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds:
-not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing
-JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr`
-and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the
-details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be
-replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-
-export default writable( 0 )
+```bash
+yarn run dev
 ```
+
+The app will be accessible at \`http://localhost:5173\`.
+
+### Usage
+
+1. Select the source and destination directories.
+2. Customize additional options such as excluding certain files or directories.
+3. The generated `rsync` command will be displayed, ready for you to copy and use.
+4. You can modify the options or extend the functionality as needed for your project.
+
+### Deployment
+
+To build the app for production, use the following command:
+
+```bash
+yarn run build
+```
+
+This will generate optimized files in the \`public\` directory, which you can deploy
