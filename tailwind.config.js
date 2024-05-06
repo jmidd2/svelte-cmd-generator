@@ -1,6 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+export default {
     content: ['./index.html', './src/**/*.{svelte,js,ts,jsx,tsx}'],
     theme: {
         extend: {
@@ -21,5 +21,6 @@ exports.default = {
             },
         },
     },
-    plugins: [],
+    plugins: [forms, typography],
 };
+//# sourceMappingURL=tailwind.config.js.map
