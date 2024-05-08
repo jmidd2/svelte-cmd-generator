@@ -20,7 +20,7 @@ Make sure you have Node.js and yarn installed on your machine.
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://git.jmidd.dev/jmidd-dev/command-generator
+   git clone https://github.com/jmidd2/svelte-cmd-generator.git
    ```
 
 2. Navigate to the project directory:
