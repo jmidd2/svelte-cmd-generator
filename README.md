@@ -26,7 +26,7 @@ Make sure you have Node.js and yarn installed on your machine.
 2. Navigate to the project directory:
 
    ```bash
-   cd command-generator
+   cd svelte-cmd-generator
    ```
 
 3. Install dependencies:
