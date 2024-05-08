@@ -43,7 +43,7 @@ To run the app locally, use the following command:
 yarn run dev
 ```
 
-The app will be accessible at \`http://localhost:5173\`.
+The app will be accessible at `http://localhost:5173`.
 
 ### Usage
 
